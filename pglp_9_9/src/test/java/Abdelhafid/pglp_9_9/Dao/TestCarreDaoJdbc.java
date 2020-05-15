@@ -54,7 +54,7 @@ public class TestCarreDaoJdbc {
 		assertEquals( create.getNomForme(),find.getNomForme());
 		assertEquals( create.getCote(),find.getCote());
 		assertEquals( create.getCentre_carre().getX(),find.getCentre_carre().getX());
-		assertEquals( create.getCentre_carre().getY(), find.getCentre_carre().getX());
+		assertEquals( create.getCentre_carre().getY(), find.getCentre_carre().getY());
 	}
 	
 	
@@ -100,6 +100,10 @@ public void testFindAll() {
 	 Carre create1= carreDao.Create(c1);
 	assertEquals(carreDao.FindAll().size(),2);
 
+	carreDao.delete(c);
+	carreDao.delete(c1);
+	carreDao.delete(c2);
+	assertEquals(carreDao.FindAll().size(),0);
 	
 }
 	
