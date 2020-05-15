@@ -37,7 +37,7 @@ public class TestCarreDaoJdbc {
 		assertEquals( create.getNomForme(),c.getNomForme());
 		assertEquals( create.getCote(),c.getCote());
 		assertEquals( create.getCentre_carre().getX(),c.getCentre_carre().getX());
-		assertEquals( create.getCentre_carre().getY(), c.getCentre_carre().getX());
+		assertEquals( create.getCentre_carre().getY(), c.getCentre_carre().getY());
 		
 	}
 
