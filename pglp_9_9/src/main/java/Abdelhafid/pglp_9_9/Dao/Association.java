@@ -40,7 +40,6 @@ public class Association {
 			
 			prepare.setString(1,nom_forme);
 			int result = prepare.executeUpdate();
-			assert result ==1;
 			
 		}catch (SQLException e) {
 			e.printStackTrace();
@@ -57,7 +56,6 @@ public class Association {
 			
 			prepare.setString(1,nom_Groupe);
 			int result = prepare.executeUpdate();
-			assert result ==1;
 			
 		}catch (SQLException e) {
 			e.printStackTrace();
