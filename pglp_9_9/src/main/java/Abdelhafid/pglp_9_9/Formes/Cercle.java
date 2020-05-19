@@ -21,7 +21,11 @@ public class Cercle extends Forme {
 	public Cercle(String nom, final Point centre, final int rayon) {
 		super(nom);
 		this.centre= centre.copie();
+		if(rayon>0) {
 		this.rayon=rayon;
+		}else {
+			System.out.println("le rayon et negatif");
+		}
 		
 	}
 	

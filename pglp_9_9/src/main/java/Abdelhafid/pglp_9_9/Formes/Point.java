@@ -1,5 +1,7 @@
 package Abdelhafid.pglp_9_9.Formes;
 
+import java.io.CharConversionException;
+
 public class Point {
 	/**
      * Valeur de l'abscisse du point.
@@ -22,9 +24,41 @@ public class Point {
      * @param abscisse Valeur en abscisse du point.
      * @param ord Valeur en ordonnée du point.
      */
-    public Point(final int abscisse, final int  ordonnee) {
+    public Point(final int abscisse, final int ordonnee) {
         this.x = abscisse;
         this.y = ordonnee;
+    }
+    
+    /**
+     * Constructeur de Point .
+     * @param une chaine de caracteres.
+     * @param ord Valeur en ordonnée du point.
+     */
+    public Point(String chaine) throws CharConversionException {
+    	
+    	chaine.replace(" ", "");
+        if (chaine.charAt(0) != '('|| chaine.charAt(chaine.length() - 1) != ')') {
+            System.err.println(chaine);
+            throw new CharConversionException();
+        }
+        
+        String point = chaine.substring(1, chaine.length() - 1);
+        String[] split = point.split(",");
+        if (split.length != 2) {
+        	
+            System.err.println(chaine);
+            throw new CharConversionException();
+        }
+        
+        try {
+            this.x = Integer.parseInt(split[0]);
+            this.y = Integer.parseInt(split[1]);
+            
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            throw e;
+        }
+    	     
     }
     
     /**
