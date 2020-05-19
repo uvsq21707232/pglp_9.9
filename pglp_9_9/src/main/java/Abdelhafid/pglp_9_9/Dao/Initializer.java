@@ -4,7 +4,6 @@ import java.sql.*;
 
 import java.util.Properties;
 
-
 public class Initializer {
 
 	static final String userName = "";

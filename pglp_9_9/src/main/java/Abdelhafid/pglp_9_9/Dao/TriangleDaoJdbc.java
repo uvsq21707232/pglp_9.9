@@ -37,8 +37,7 @@ public class TriangleDaoJdbc implements DaoJDBC<Triangle> {
 				result = prepare.executeUpdate();
 	            assert result == 1;
 	            
-	            System.out.println("le "+ triangle.getNomForme()+" a bien été crée");
-				
+	           
 				 
 			}catch (SQLException e) {
 				e.printStackTrace();

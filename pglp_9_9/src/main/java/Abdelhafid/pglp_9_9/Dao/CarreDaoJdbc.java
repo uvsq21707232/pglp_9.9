@@ -32,7 +32,7 @@ public class CarreDaoJdbc implements DaoJDBC<Carre> {
 			result = prepare.executeUpdate();
             assert result == 1;
             
-            System.out.println("le "+ carre.getNomForme()+" a bien été crée");
+           
 			
 			 
 		}catch (SQLException e) {

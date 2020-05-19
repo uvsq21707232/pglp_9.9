@@ -34,7 +34,7 @@ public class CercleDaoJdbc implements DaoJDBC<Cercle> {
 				result = prepare.executeUpdate();
 	            assert result == 1;
 	            
-	            System.out.println("le "+ cercle.getNomForme()+" a bien été crée");
+	            
 				
 				 
 			}catch (SQLException e) {

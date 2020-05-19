@@ -36,7 +36,7 @@ public class RectangleDaoJdbc implements DaoJDBC<Rectangle> {
 				result = prepare.executeUpdate();
 	            assert result == 1;
 	            
-	            System.out.println("le "+ rectangle.getNomForme()+ " a bien été crée");
+	            
 				
 				 
 			}catch (SQLException e) {

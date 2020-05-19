@@ -64,6 +64,19 @@ public class Association {
 		
 	}
 	
+	
+	public static boolean appartient(final String nomforme) {
+        try (Connection connect = DriverManager.getConnection(Initializer.url)) {
+            PreparedStatement prepare = connect.prepareStatement(
+                    "SELECT * FROM ASSOCIATION WHERE NomForme = ?");
+            prepare.setString(1, nomforme);
+            ResultSet result = prepare.executeQuery();
+            return result.next();
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+	
 	public static ArrayList<Forme> Find_All(final String nom_Groupe) {
 		  ArrayList<Forme> form = new ArrayList<Forme>();
 		try (Connection connect = DriverManager.getConnection(Initializer.url)) {
