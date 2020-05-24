@@ -4,15 +4,12 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import Abdelhafid.pglp_9_9.Formes.Cercle;
 import Abdelhafid.pglp_9_9.Formes.Point;
 import Abdelhafid.pglp_9_9.Formes.Rectangle;
 
 public class TestRectangleDaoJdbc {
 	
-
-	Point p1,p2,p3;
+Point p1,p2,p3;
 Rectangle r,r1,r2,create,create1,find;
 RectangleDaoJdbc recDao;
  

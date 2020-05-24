@@ -24,12 +24,12 @@ public class Rectangle extends Forme {
 	 * @param longueur la longueur du réctangle.
 	 * @param largeur la largeur du réctangle.
 	 */
-	public Rectangle(String nom,final Point centre,final int longueur, final int largeur){
+	public Rectangle(String nom, final Point centre, final int longueur, final int largeur) {
 		super(nom);
-		this.centre_rectangle= centre.copie();
-		this.longueur=longueur;
-		this.largeur= largeur;
-		
+		this.centre_rectangle = centre.copie();
+		this.longueur = longueur;
+		this.largeur = largeur;
+
 	}
 
 	/**
@@ -37,20 +37,20 @@ public class Rectangle extends Forme {
      * @param a la valeur à ajoutée à l'abscisse du point bas_gauche du rectangle.
      * @param b la valeur à ajoutée à l'ordonée du point bas_gauche du rectangle.
      **/
-	public void move_Forme(final int a,final int b) {
+	public void move_Forme(final int a, final int b) {
 		centre_rectangle.move_point(a, b);
-		
+
 	}
 
 	/**
      * Fonction pour l'affichage du rectangle.
      */
 	public void affiche_forme() {
-		System.out.println("Réctangle(centre=(" + centre_rectangle.getX()
-        + "," + centre_rectangle.getY() + "), longueur=" + longueur + ", largeur="+largeur+")");
-		
+		System.out.println("Réctangle(centre=(" + centre_rectangle.getX() + "," + centre_rectangle.getY()
+				+ "), longueur=" + longueur + ", largeur=" + largeur + ")");
+
 	}
-	
+
 	/**
      * Getter du point au centre du rectangle.
      * @return le point au centre du rectangle.

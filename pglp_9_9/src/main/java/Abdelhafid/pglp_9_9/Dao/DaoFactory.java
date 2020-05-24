@@ -7,7 +7,6 @@ import Abdelhafid.pglp_9_9.Formes.Rectangle;
 import Abdelhafid.pglp_9_9.Formes.Triangle;
 
 public  class  DaoFactory {
-	
 	/**
      * Crée un CarreDaoJdbc.
      * @return  CareeDaoJdbc crée.
@@ -16,7 +15,6 @@ public  class  DaoFactory {
 		return new CarreDaoJdbc();
 		
 		}
-	
 	/**
      * Crée un CercleDaoJdbc.
      * @return  CercleDaoJdbc crée.
@@ -25,7 +23,6 @@ public  class  DaoFactory {
 		return new CercleDaoJdbc();
 		
 		}
-	
 	/**
      * Crée un TriangleDaoJdbc.
      * @return  TriangleDaoJdbc crée.
@@ -34,7 +31,6 @@ public  class  DaoFactory {
 		return new TriangleDaoJdbc();
 		
 		}
-	
 	/**
      * Crée un RectangleDaoJdbc.
      * @return  RectangleDaoJdbc crée.

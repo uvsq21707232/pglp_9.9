@@ -8,7 +8,7 @@ import org.junit.Test;
 public class TestTriangle {
 	
 	Point p1 , p2 , p3;
-    Triangle tri ;
+    Triangle tri;
 	
 	@Before()
 	public void setUp() {

@@ -1,4 +1,4 @@
-package Abdelhafid.pglp_9_9;
+package Abdelhafid.pglp_9_9.Dao;
 
 import static org.junit.Assert.assertEquals;
 

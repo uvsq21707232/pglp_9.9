@@ -25,12 +25,12 @@ public class Triangle extends Forme {
 	 * @param bas_gauche le point bas_gauche du trinagle.
 	 * @param bas_droite le point bas_droite du trinagle.
 	 */
-	public Triangle(String nom, final Point haut,final Point bas_gauche, final Point bas_droite) {
+	public Triangle(String nom, final Point haut, final Point bas_gauche, final Point bas_droite) {
 		super(nom);
-		this.haut=haut.copie();
-		this.bas_gauche=bas_gauche.copie();
-		this.bas_droite=bas_droite.copie();
-		
+		this.haut = haut.copie();
+		this.bas_gauche = bas_gauche.copie();
+		this.bas_droite = bas_droite.copie();
+
 	}
 
 	/**
@@ -42,18 +42,17 @@ public class Triangle extends Forme {
 		haut.move_point(a, b);
 		bas_gauche.move_point(a, b);
 		bas_droite.move_point(a, b);
-		
+
 	}
 
 	/**
      * Fonction pour l'affichage du triangle.
      */
 	public void affiche_forme() {
-		System.out.println("Triangle(point_haut=(" + haut.getX()
-        + "," + haut.getY() + "), point_bas_gauche=(" + bas_gauche.getX()+ "," + bas_gauche.getY()
-        +"), point_bas_droite=(" + bas_droite.getX() + "," + bas_droite.getY() + "))");
-	
-		
+		System.out.println("Triangle(point_haut=(" + haut.getX() + "," + haut.getY() + "), point_bas_gauche=("
+				+ bas_gauche.getX() + "," + bas_gauche.getY() + "), point_bas_droite=(" + bas_droite.getX() + ","
+				+ bas_droite.getY() + "))");
+
 	}
 
 

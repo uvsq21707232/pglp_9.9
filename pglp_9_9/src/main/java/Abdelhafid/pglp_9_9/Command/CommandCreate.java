@@ -13,61 +13,55 @@ import Abdelhafid.pglp_9_9.Formes.Forme;
 import Abdelhafid.pglp_9_9.Formes.Rectangle;
 import Abdelhafid.pglp_9_9.Formes.Triangle;
 
+/**
+ * la classe de création des formes.
+ */
 public class CommandCreate implements Command {
-	
 	/**
-	 *  la forme a créer.
+	 * la forme a créer.
 	 */
-      private Forme forme;
-      
-     /**
-  	 *  Constructeur de la classe.
-  	 * @param la forme a créer.
-  	 */
-	public  CommandCreate(Forme f) {
-		this.forme=f;
-		
+	private Forme forme;
+	/**
+	 * Constructeur de la classe.
+	 * @param f la forme a créer.             
+	 */
+	public CommandCreate(final Forme f) {
+		this.forme = f;
+
 	}
-	
 	/**
-	 * Fonction qui exécute une commande pour créer un objet 
-	 * selon le type de forme.
+	 * Fonction qui exécute une commande pour
+	 *  créer un objet selon le type de forme.
 	 */
-	
 	@Override
 	public void execute() {
-		
-	
-		DaoFactory fabrique=  new DaoFactory();
+
+		DaoFactory fabrique = new DaoFactory();
 		Forme form = null;
-		if(this.forme instanceof Carre) {
-        
-            	CarreDaoJdbc carredao=(CarreDaoJdbc) fabrique.getCarreDaoJdbc();
-            	 form=carredao.Create((Carre) forme);
-            	 
-        		}else if (this.forme instanceof Cercle){
-        			
-        			CercleDaoJdbc cercleDao = (CercleDaoJdbc) fabrique.getCercleDaoJdbc();
-        			form = cercleDao.Create((Cercle) forme);
-        			
-        		}else if (this.forme instanceof Rectangle){
-        			RectangleDaoJdbc rectangleDao = (RectangleDaoJdbc) fabrique.getRectangleDaoJdbc();
-        			form = rectangleDao.Create((Rectangle) forme);
-        			
-        		}else if (this.forme instanceof Triangle){
-        			TriangleDaoJdbc triangleDao = (TriangleDaoJdbc ) fabrique.getTriangleDaoJdbc();
-        			form = triangleDao.Create((Triangle) forme);
-        			
-        		}else if (this.forme instanceof Composite){
-        			GroupeDaoJdbc grpDao=(GroupeDaoJdbc) fabrique.getGroupeDaoJdbc();
-        			form = grpDao.Create((Composite) forme);
-        			
-        		}
-		
-		
-		
-		
-		
+		if (this.forme instanceof Carre) {
+
+			CarreDaoJdbc carredao = (CarreDaoJdbc) fabrique.getCarreDaoJdbc();
+			form = carredao.Create((Carre) forme);
+
+		} else if (this.forme instanceof Cercle) {
+
+			CercleDaoJdbc cercleDao = (CercleDaoJdbc) fabrique.getCercleDaoJdbc();
+			form = cercleDao.Create((Cercle) forme);
+
+		} else if (this.forme instanceof Rectangle) {
+			RectangleDaoJdbc rectangleDao = (RectangleDaoJdbc) fabrique.getRectangleDaoJdbc();
+			form = rectangleDao.Create((Rectangle) forme);
+
+		} else if (this.forme instanceof Triangle) {
+			TriangleDaoJdbc triangleDao = (TriangleDaoJdbc) fabrique.getTriangleDaoJdbc();
+			form = triangleDao.Create((Triangle) forme);
+
+		} else if (this.forme instanceof Composite) {
+			GroupeDaoJdbc grpDao = (GroupeDaoJdbc) fabrique.getGroupeDaoJdbc();
+			form = grpDao.Create((Composite) forme);
+
+		}
+
 	}
 
 }
